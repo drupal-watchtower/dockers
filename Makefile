@@ -43,9 +43,9 @@ install:
 	$(call php-0, chown $(CUID):$(CGID) .)
 
 prepare:
-	$(call php, drush dl -y --destination=/tmp drupal-7.56)
-	$(call php, sh -c "rsync -ax /tmp/drupal-7.56/* /var/www/html")
-	$(call php, rm -rf /tmp/drupal-7.56)
+	$(call php, drush dl -y --destination=/tmp drupal-7.59)
+	$(call php, sh -c "rsync -ax /tmp/drupal-7.59/* /var/www/html")
+	$(call php, rm -rf /tmp/drupal-7.59)
 	$(call php, drush dl -y ctools diff entity entityreference features rules strongarm views)
 
 si:
